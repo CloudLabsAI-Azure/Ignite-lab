@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "Analytics in the Microsoft Intelligent Data Platform",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/01.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/03.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/04.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/05.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/06.md",
+        "Order": 6
+      }
+    ]
+  }
+]
