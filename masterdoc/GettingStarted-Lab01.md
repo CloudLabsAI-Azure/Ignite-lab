@@ -34,7 +34,7 @@ The architecture for this lab involves the following key components:
 
 - **Azure Data Explorer (ADX):** Used for ingesting and analyzing near real-time data, such as thermostat readings, from Event Hubs. ADX is used to monitor and manage data, helping with immediate insights and operational efficiency.
 - **Azure Synapse Analytics:** A fully integrated analytics platform that combines big data and data warehousing. It is used to create pipelines that ingest batch data from various data sources (Snowflake, Teradata, SQL DB, Oracle) into the Bronze layer of the data lake.
-- **Azure Data Lake Storage (ADLS Gen2):** The central data storage system where raw data from both real-time and batch processes is ingested. This data serves as the foundation for further analytics, reporting, and machine learning models.
+- **Azure Data Lake Storage:** The central data storage system where raw data from both real-time and batch processes is ingested. This data serves as the foundation for further analytics, reporting, and machine learning models.
 - **Azure Event Hub:** Manages the ingestion of streaming data from devices, like thermostats, into ADX for real-time analysis. This is key for the ingestion of continuous data streams.
 - **Synapse Pipelines:** These pipelines manage the orchestration of data movement from various operational and analytical sources into the data lake, providing a structured flow of raw data into the system. 
 
