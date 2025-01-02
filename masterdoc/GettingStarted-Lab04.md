@@ -1,42 +1,41 @@
 # Analytics in Microsoft Intelligent Data Platform (MIDP)
 
-### Overall Estimated Duration : **90 Minutes**
+### Overall Estimated Duration : **45 Minutes**
 
 ## Overview
 
-In this hands-on lab, you will explore data ingestion techniques to build a robust Lakehouse architecture using Azure Synapse Analytics, Azure Data Explorer (ADX), and supporting tools. This lab focuses on ingesting data from a wide array of analytical and operational data sources, including streaming near real-time data and historical datasets, into a unified Lakehouse. By leveraging the capabilities of Azure Synapse pipelines, Azure Event Hub, and ADX, you will gain hands-on experience in setting up data ingestion workflows, performing real-time analytics, and preparing data for downstream analytics and machine learning workloads.
+Microsoft Purview is a unified data governance service that helps organizations manage and govern their data across multi-cloud environments. In this lab, you will explore how Microsoft Purview enables effective data governance for Wide World Importers by managing data from various sources like Azure SQL Database, Oracle, and ADLS Gen2.
+
+In this hands-on lab, you will navigate through the Microsoft Purview portal, explore the data map to visualize and govern the data assets across the estate, and review the relationships between different data sources. This exercise emphasizes the importance of data governance, ensuring that all data is classified, discovered, and made accessible for users across the organization, empowering data-driven insights and ensuring compliance and security.
 
 ## Objective
 
-**Data ingestion from a spectrum of analytical and operational data sources into the Lakehouse**: Learn to design and configure Synapse pipelines to ingest both near real-time IoT streaming data and historical data from a variety of analytical and operational sources into the Lakehouse. Gain hands-on experience in setting up real-time ingestion using Azure Event Hub and Azure Data Explorer (ADX) for streaming data, and explore how to efficiently ingest analytical data from Snowflake and Teradata, as well as operational data from Azure SQL Database and Oracle. This process will develop the skills needed to handle both streaming and batch data ingestion, ensuring seamless integration into a unified Lakehouse architecture for advanced analytics and insights.
+**Glimpse of Purview to govern the overall data and analytics estate:** Learn to explore and manage data governance across multi-cloud environments using Microsoft Purview. Gain hands-on experience in navigating the Purview Governance Portal, discovering and classifying data from various sources and understanding how data relationships are mapped. Additionally, explore how to organize and manage data sources within the data map, ensuring that they are easily discoverable and accessible for governance. This process will help develop the skills necessary to manage and govern data assets, ensuring compliance, security, and accessibility across your data estate. 
 
 ## Prerequisites
 
 Participants should have:
 
-- **Basic Knowledge of Microsoft Azure:** Familiarity with the Azure portal, Azure Synapse Analytics, and Azure Data Explorer (ADX).
-- **Understanding of Data Ingestion Pipelines:** Awareness of data ingestion workflows and pipeline structures in Azure Synapse.
-- **Basic Knowledge of Kusto Query Language (KQL):** Fundamental understanding of KQL for querying and analyzing data in Azure Data Explorer.
-- **Familiarity with Event Hub:** Basic knowledge of Azure Event Hub for ingesting streaming data.
-- **Experience with Data Lake Storage:** Understanding the role of Azure Data Lake Storage in data ingestion and storage workflows.
+- **Understanding of Data Governance**: Knowledge of the importance of data governance and the ability to classify and manage data assets across multiple environments.
+- **Familiarity with Microsoft Purview**: A basic understanding of Microsoft Purview, including its role in managing data governance and data cataloging within an organization.
+- **Understanding of Data Sources and Cloud Environments**: Awareness of common data sources like Azure SQL Database, Oracle, and ADLS Gen2, and how they integrate into a data governance platform.
+- **Basic Data Mapping Concepts**: Knowledge of how data relationships are visualized and managed within a data map to ensure data is accessible and well-governed across the estate.
 
 ## Architecture
 
-The architecture for this lab involves ingesting both near real-time streaming data and batch data from various operational and analytical sources into a centralized data lake. **Azure Data Explorer (ADX)** is used to analyze the streaming data in near real-time, particularly for monitoring thermostat data. The **Azure Synapse Analytics** service is utilized for ingesting and processing batch data from sources like **Snowflake**, **Teradata**, **SQL DB**, and **Oracle** into the Bronze layer of the **Azure Data Lake Storage**. This data lake serves as the foundation for further analytics and business intelligence.
+The lab architecture involves a well-structured flow where Microsoft Purview serves as the central hub for governing the data estate. The architecture begins with connecting various data sources like Oracle, Teradata, ADLS Gen2, and Azure SQL Database to Microsoft Purview. These data sources are registered in Purview’s data map, which visualizes and organizes the relationships between them. Purview ensures that data is classified, secured, and made discoverable for governance purposes. By using the data map, users can easily access, manage, and govern data from disparate sources across the organization, facilitating better decision-making and compliance. The integrated flow ensures streamlined data governance, effective management, and enhanced accessibility for stakeholders.
 
 ## Architecture Diagram
 
-![Architecture Diagram](../media/lab01-midp.png)
+![Architecture Diagram](../media/lab04-midp.png)
 
 ## Explanation of Components
 
 The architecture for this lab involves the following key components:
 
-- **Azure Data Explorer (ADX):** Used for ingesting and analyzing near real-time data, such as thermostat readings, from Event Hubs. ADX is used to monitor and manage data, helping with immediate insights and operational efficiency.
-- **Azure Synapse Analytics:** A fully integrated analytics platform that combines big data and data warehousing. It is used to create pipelines that ingest batch data from various data sources (Snowflake, Teradata, SQL DB, Oracle) into the Bronze layer of the data lake.
-- **Azure Data Lake Storage:** The central data storage system where raw data from both real-time and batch processes is ingested. This data serves as the foundation for further analytics, reporting, and machine learning models.
-- **Azure Event Hub:** Manages the ingestion of streaming data from devices, like thermostats, into ADX for real-time analysis. This is key for the ingestion of continuous data streams.
-- **Synapse Pipelines:** These pipelines manage the orchestration of data movement from various operational and analytical sources into the data lake, providing a structured flow of raw data into the system. 
+- **Microsoft Purview:** A unified data governance platform that enables the discovery, classification, and management of data across multiple environments. It allows you to govern and visualize the relationships between data sources, ensuring data is accessible, secure, and compliant with governance policies.
+
+- **Data Sources (Oracle, Teradata, ADLS Gen2, and Azure SQL Database):** These are the various operational and analytical data sources that are registered within Microsoft Purview. These data sources provide the raw and structured data that is governed and organized for access, analysis, and compliance within the data estate.
 
 ## Getting Started with the Lab 
 

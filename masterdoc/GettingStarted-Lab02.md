@@ -3,40 +3,42 @@
 ### Overall Estimated Duration : **90 Minutes**
 
 ## Overview
+ 
+Azure Databricks, combined with Delta Live Tables, enables seamless data processing, analysis, and machine learning within a unified Lakehouse architecture. In this hands-on lab, you will set up an Azure Databricks environment, explore a sentiment analysis model, and create a Delta Live Table pipeline to process and analyze data from multiple sources.  
 
-In this hands-on lab, you will explore data ingestion techniques to build a robust Lakehouse architecture using Azure Synapse Analytics, Azure Data Explorer (ADX), and supporting tools. This lab focuses on ingesting data from a wide array of analytical and operational data sources, including streaming near real-time data and historical datasets, into a unified Lakehouse. By leveraging the capabilities of Azure Synapse pipelines, Azure Event Hub, and ADX, you will gain hands-on experience in setting up data ingestion workflows, performing real-time analytics, and preparing data for downstream analytics and machine learning workloads.
+This lab demonstrates how to integrate campaign data, customer churn data, and Twitter messages into a single Lakehouse structure, enabling Wide World Importers to gain actionable insights and improve data-driven decision-making.
 
 ## Objective
 
-**Data ingestion from a spectrum of analytical and operational data sources into the Lakehouse**: Learn to design and configure Synapse pipelines to ingest both near real-time IoT streaming data and historical data from a variety of analytical and operational sources into the Lakehouse. Gain hands-on experience in setting up real-time ingestion using Azure Event Hub and Azure Data Explorer (ADX) for streaming data, and explore how to efficiently ingest analytical data from Snowflake and Teradata, as well as operational data from Azure SQL Database and Oracle. This process will develop the skills needed to handle both streaming and batch data ingestion, ensuring seamless integration into a unified Lakehouse architecture for advanced analytics and insights.
+**Explore the offline data and analytics pipeline using open Delta format and Azure Databricks Delta Live Tables. Stitch streaming and non-streaming data landed earlier to create a combined data product to build a simple Lakehouse:** Learn to set up and manage an **Azure Databricks environment**, configure **Delta Live Table (DLT) pipelines**, and integrate machine learning models for sentiment analysis. Gain hands-on experience in exploring datasets from multiple sources, including **campaign data**, **customer churn data**, and **Twitter messages**, and processing them into a unified **Lakehouse architecture**. This lab focuses on building a reliable data pipeline using **Delta Live Tables** to ensure efficient ETL operations, maintain data quality, and enable seamless data lineage tracking across **Bronze**, **Silver**, and **Gold** layers. By completing this lab, you’ll develop essential skills for managing data workflows, deriving actionable insights, and supporting advanced analytics and machine learning scenarios.
 
 ## Prerequisites
 
-Participants should have:
+Participants should have:  
 
-- **Basic Knowledge of Microsoft Azure:** Familiarity with the Azure portal, Azure Synapse Analytics, and Azure Data Explorer (ADX).
-- **Understanding of Data Ingestion Pipelines:** Awareness of data ingestion workflows and pipeline structures in Azure Synapse.
-- **Basic Knowledge of Kusto Query Language (KQL):** Fundamental understanding of KQL for querying and analyzing data in Azure Data Explorer.
-- **Familiarity with Event Hub:** Basic knowledge of Azure Event Hub for ingesting streaming data.
-- **Experience with Data Lake Storage:** Understanding the role of Azure Data Lake Storage in data ingestion and storage workflows.
+- **Basic Knowledge of Microsoft Azure:** Familiarity with the Azure portal and core Azure services such as Azure Databricks and Azure Data Lake Storage Gen2.  
+- **Understanding of Data Pipelines:** Awareness of data ingestion and transformation workflows using ETL/ELT processes.  
+- **Familiarity with Delta Lake Concepts:** Basic knowledge of Delta Lake architecture, including Bronze, Silver, and Gold layers.  
+- **Experience with Notebooks in Databricks:** Understanding how to navigate and execute notebooks in Azure Databricks.  
+- **Basic Understanding of Machine Learning Models:** Awareness of how machine learning models are trained and deployed for data analysis tasks. 
 
-## Architecture
+## Architecture  
 
-The architecture for this lab involves ingesting both near real-time streaming data and batch data from various operational and analytical sources into a centralized data lake. **Azure Data Explorer (ADX)** is used to analyze the streaming data in near real-time, particularly for monitoring thermostat data. The **Azure Synapse Analytics** service is utilized for ingesting and processing batch data from sources like **Snowflake**, **Teradata**, **SQL DB**, and **Oracle** into the Bronze layer of the **Azure Data Lake Storage**. This data lake serves as the foundation for further analytics and business intelligence.
+The lab architecture follows a structured flow designed to build an integrated **Lakehouse** using **Azure Databricks Delta Live Tables (DLT)**. The process begins with setting up the **Azure Databricks Environment**, ensuring the infrastructure is ready for data processing and analysis tasks. Next, a **Sentiment Analysis Machine Learning Model** is reviewed and integrated, enabling advanced analytics on Twitter data. Finally, a **Delta Live Table Pipeline** is created to stitch together streaming and non-streaming data from various sources, transforming it through **Bronze**, **Silver**, and **Gold** layers. This architecture ensures seamless data ingestion, transformation, and preparation for downstream analytics and machine learning workflows.  
 
 ## Architecture Diagram
 
-![Architecture Diagram](../media/lab01-midp.png)
+![Architecture Diagram](../media/lab02-midp.png)  
 
-## Explanation of Components
+## Explanation of Components  
 
-The architecture for this lab involves the following key components:
+The architecture for this lab involves the following key components:  
 
-- **Azure Data Explorer (ADX):** Used for ingesting and analyzing near real-time data, such as thermostat readings, from Event Hubs. ADX is used to monitor and manage data, helping with immediate insights and operational efficiency.
-- **Azure Synapse Analytics:** A fully integrated analytics platform that combines big data and data warehousing. It is used to create pipelines that ingest batch data from various data sources (Snowflake, Teradata, SQL DB, Oracle) into the Bronze layer of the data lake.
-- **Azure Data Lake Storage:** The central data storage system where raw data from both real-time and batch processes is ingested. This data serves as the foundation for further analytics, reporting, and machine learning models.
-- **Azure Event Hub:** Manages the ingestion of streaming data from devices, like thermostats, into ADX for real-time analysis. This is key for the ingestion of continuous data streams.
-- **Synapse Pipelines:** These pipelines manage the orchestration of data movement from various operational and analytical sources into the data lake, providing a structured flow of raw data into the system. 
+- **Azure Databricks Environment:** The foundational setup for creating, managing, and running data engineering and machine learning workloads. This environment provides a collaborative workspace for teams to build and execute notebooks.  
+
+- **Sentiment Analysis Model:** A pre-trained **Machine Learning Model** used to analyze Twitter data, identifying sentiment as positive, negative, or neutral. The model outputs are integrated into the Delta Live Table pipeline for further analysis.  
+
+- **Delta Live Table Pipeline (DLT):** A managed ETL pipeline framework in Azure Databricks that automates data ingestion, transformation, and quality enforcement. DLT simplifies data workflows and ensures data integrity across **Bronze**, **Silver**, and **Gold** layers.  
 
 ## Getting Started with the Lab 
 
