@@ -4,11 +4,11 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SachithaBS/Ignite-lab/main/masterdoc/GettingStarted-Lab01.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/GettingStarted-Lab01.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SachithaBS/Ignite-lab/main/masterdoc/03.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Ignite-lab/main/masterdoc/03.md",
         "Order": 3
       }
     ]
